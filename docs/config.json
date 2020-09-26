@@ -2,6 +2,6 @@
   "useSideMenu": true,
   "lineBreaks": "gfm",
   "additionalFooterText": "TEST",
-  "anchorCharacter": "&para;"
+  "anchorCharacter": "&para;",
   "title": "test-title"
 }
