@@ -1,5 +1,4 @@
-# Your Wiki Name
+# 忘備録
 
 [Home](index.md)
 [About](about.md)
-[Download](download.md)
