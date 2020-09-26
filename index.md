@@ -1,3 +1,3 @@
-# Hello World!
+# 忘備録
 
-This is my first page!
+忘備録として利用します。
