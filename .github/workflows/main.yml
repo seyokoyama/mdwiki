@@ -10,11 +10,16 @@ jobs:
     steps:
       - name: checkout master
         uses: actions/checkout@v2
-	with:
-	  ref: master
-
+        with:
+          ref: master
       - name: push gh-pages
         env:
-  	  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-	run: |
-	  git push origin gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          git switch gh-pages
+          git fetch && git pull origin master
+          rm ./docs/*
+          cp *.* ./docs/
+          git add .
+          git commit -m "update gh-pages"
+          git push origin gh-pages
