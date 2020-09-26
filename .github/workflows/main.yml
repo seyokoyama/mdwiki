@@ -12,11 +12,12 @@ jobs:
         uses: actions/checkout@master
       - name: git setting
         run: |
-         git config --local user.email "workflow@exsample.com"
+         git config --local user.email "workflow@example.com"
          git config --local user.name "workflow[bot]"
       - name: update docs
         run: |
           rm ./docs/*
+          cp index.html ./docs/
           cp *.md ./docs/
           ls *.md
       - name: commit docs
