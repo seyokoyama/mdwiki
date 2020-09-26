@@ -12,13 +12,16 @@ jobs:
         uses: actions/checkout@master
       - name: git setting
         run: |
-         git config --local user.email "s.yokoyama.rss@gmail.com"
-         git config --local user.name "seyokoyama"
+         git config --local user.email "workflow@exsample.com"
+         git config --local user.name "workflow[bot]"
       - name: update docs
         run: |
           rm ./docs/*
-          cp *.* ./docs/
+          cp *.md ./docs/
+          ls *.md
       - name: commit docs
         run: |
-          git commit . -m "update docs"
+          date >> README.md
+          git add .
+          git commit -m "update docs"
           git push origin master
