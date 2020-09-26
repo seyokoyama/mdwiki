@@ -20,6 +20,5 @@ jobs:
           cp *.* ./docs/
       - name: commit docs
         run: |
-          git add --all
-          git commit -m "update docs"
+          git commit . -m "update docs"
           git push origin master
