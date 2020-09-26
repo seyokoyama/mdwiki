@@ -1,0 +1,7 @@
+{
+  "useSideMenu": true,
+  "lineBreaks": "gfm",
+  "additionalFooterText": "TEST",
+  "anchorCharacter": "&para;"
+  "title": "test-title"
+}
