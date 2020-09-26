@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout master
-        uses: actions/checkout@v2
-        with:
-          ref: master
+        uses: actions/checkout@master
+      - name: git setting
+        run: |
+         git config --local user.email "s.yokoyama.rss@gmail.com"
+         git config --local user.name "seyokoyama"
       - name: update docs
         run: |
           rm ./docs/*
           cp *.* ./docs/
           git add .
-          git config --global user.email "ci@exsample.com"
-          git config --global user.name "ci"
           git commit -m "update docs"
           git push origin master
