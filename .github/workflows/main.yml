@@ -13,9 +13,7 @@ jobs:
         with:
           ref: master
       - name: push gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
+        run: |
           git switch gh-pages
           git fetch && git pull origin master
           rm ./docs/*
