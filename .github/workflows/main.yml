@@ -18,6 +18,7 @@ jobs:
         run: |
           rm ./docs/*
           cp index.html ./docs/
+          cp config.json ./docs/
           cp *.md ./docs/
           ls *.md
       - name: commit docs
