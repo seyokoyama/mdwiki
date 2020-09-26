@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
-      - name: push gh-pages
+      - name: update docs
         run: |
-          git switch gh-pages
-          git fetch && git pull origin master
           rm ./docs/*
           cp *.* ./docs/
           git add .
-          git commit -m "update gh-pages"
-          git push origin gh-pages
+          git config --global user.email "ci@exsample.com"
+          git config --global user.name "ci"
+          git commit -m "update docs"
+          git push origin master
