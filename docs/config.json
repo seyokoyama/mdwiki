@@ -1,7 +1,6 @@
 {
-  "useSideMenu": true,
-  "lineBreaks": "gfm",
-  "additionalFooterText": "All content and images &copy; seyokoyama / ",
-  "anchorCharacter": "&para;",
-  "title": "忘備録"
+    "title": "メモ",
+    "useSideMenu": true,
+    "lineBreaks": "gfm",
+    "additionalFooterText": "All content and images &copy; seyokoyama / "
 }
